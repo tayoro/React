@@ -1,0 +1,268 @@
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-inline: 30px;
+}
+
+
+
+.nav__logo,
+.nav a,
+.nav__burger,
+.nav__close{
+    color: var(--black-color-light);
+}
+
+
+.nav__logo{
+    font-weight: bold;
+    cursor: pointer;
+    padding-inline-start: 10px;
+}
+
+.nav__data{
+    display: flex; /*flex*/
+    justify-content: start;
+    align-items: center;
+    width: 65px;
+    height: 100%;
+    column-gap: 12px;
+}
+
+.nav__toggle{
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__burger,
+.nav__burger{
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: opacity .1s, transform .4s;
+}
+
+.nav__close{
+    opacity: 0;
+}
+
+
+.nav__menu .nav__link{
+    padding-inline: 10px;
+} 
+
+
+.nav__list{
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    z-index: 1000;
+}
+
+.dropdown__item{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.dropdown__menu{
+    padding-left: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-height: 0px;
+    overflow: hidden;
+
+}
+
+.dropdown__item:hover .dropdown__menu{
+    max-height: 1000px;
+    transition: max-height 1s ease-in;
+}
+
+.dropdown__item:hover .dropdown__arrow{
+    transform: rotate(180deg);
+}
+
+.nav__search{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search{
+    margin-inline: 30px;
+    width: 100%;
+    height: 75%;
+    border-radius: 10px;
+    padding-inline-start: 10px;
+    border-color: transparent;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+
+.nav__user{
+    height: 100%;
+    display: flex;
+}
+
+.nav__choix{
+    height: 100%;
+    display: flex;/*flex*/
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin-bottom: 0;
+    column-gap: 20px;
+}
+
+
+.nav__bts{
+    height: 100%;
+    display: flex;/*flex*/
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    order: 4;
+}
+
+.nav__bts a{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    height: 80%;
+    display: grid;
+    place-content: center;
+}
+
+.nav__user__icon{
+    height: 100%;
+    display: none; /* grid*/
+    place-items: center;
+}
+
+.show-menu{
+    opacity: 1;
+    pointer-events: initial;
+    top:99px
+
+}
+
+@media screen and (max-width: 1831px){
+    .nav{
+        justify-content: space-between;
+    }
+
+
+    
+    .nav__bts{
+        display: none;
+    }
+
+
+    .nav__toggle{
+        display: block;
+    }
+    .nav{
+        position: relative;
+    }
+    .nav__menu{
+        position: absolute;
+        top: 10px;
+
+        overflow: auto;
+        pointer-events: none;
+        opacity: 0;
+
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 900;
+        border: 2px solid red;
+    }
+
+    
+    .dropdown__item{
+        display: flex;
+        position: relative;
+        height: initial;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .dropdown__arrow{
+        float: right;
+    }
+    .nav__list{
+        display: block;
+        top: 0;
+        cursor: pointer;
+    }
+
+    .nav__link{
+        display: block;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px 13px;
+        background: rgba(225, 225, 225, 1.5);
+    }
+    .dropdown__menu{
+        position: static;
+        
+    }
+
+    .nav__search{
+        width: 80%;
+    }
+
+}
+
+
+@media screen and (max-width: 1424px) {
+
+    .nav__search{
+        width: 80%;
+    }
+    .nav{
+        column-gap: 10px;
+    }
+    .nav__user{
+        display: none;
+    }
+    .nav__user__icon{
+        display: grid;
+    }
+}
+
+
+@media screen and (max-width: 632px) {
+
+    .nav__search{
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 450) {
+    .nav__search{
+        width: 10%;
+    }
+}

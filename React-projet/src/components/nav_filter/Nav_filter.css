@@ -1,0 +1,90 @@
+
+
+.filter{
+    background-color: rgba(0, 0, 0, .1);
+    height: 80px;
+}
+
+.nav__filter__menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100%;
+    
+}
+
+.nav__filter__list{
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    
+}
+
+.dropdown__filter__item{
+    height: 100%;
+    position: relative;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 12px 12px 12px 0;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+
+.nav__filter__list:first-child{
+    margin-left: 12px;
+}
+
+.dropdown__filter__menu{
+    padding-left: 0;
+    position: absolute;
+    top:100%;
+    padding-inline: 10px;
+    max-height: 0;
+    overflow: hidden;
+
+}
+
+.dropdown__filter__item:hover .dropdown__filter__menu{
+    max-height: 1000px;
+    transition: max-height .4s ease-in;
+}
+
+
+
+.dropdown__filter__link{
+    display: block;
+    padding: 10px 0;
+}
+
+.filter__list{
+    display: flex;
+    height: 100%;
+    padding: 12px;
+    
+}
+
+.filter__list__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: 100%;
+    margin-left: 12px;
+    padding-inline: 15px;
+    border-radius: 12px;
+}
+
+.filter__list__item .reset{
+    margin-inline-end: 12px;
+}
+
+
